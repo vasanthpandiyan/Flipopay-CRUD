@@ -1,0 +1,33 @@
+.navbar {
+  background-color: #000; /* Setting the background colour for the fixed navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-logo {
+  color: #fff; /* setting the color for the logo text */
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none; /* It will Removes underline from the logo text */
+}
+
+.nav-links {
+  background-color: #1597e4;
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+}
