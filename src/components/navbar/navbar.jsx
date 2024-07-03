@@ -5,7 +5,7 @@ function Navbar({ onClick }) {
     <nav className="navbar">
       <div className="navbar-container">
         <a href="/" className="navbar-logo">
-          VASANTH PANDIYAN
+          VASANTH PANDIYAN 
         </a>
         <button className="nav-links" onClick={onClick}>
           Add New Card

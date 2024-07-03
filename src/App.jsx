@@ -9,6 +9,12 @@ import CustomPopup from "./components/popup/popup";
 function App() {
   const [htmlArray, setHtmlArray] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [receivedValue, setReceivedValue] = useState("");
+
+  const handleSendValue = (value) => {
+    setReceivedValue(value);
+    console.log(receivedValue);
+  };
 
   const handleButtonClick = () => {
     const newCardData = `<div className="card">
@@ -55,15 +61,20 @@ function App() {
     // setHtmlArray([...htmlArray, newCardData]);
     togglePopup();
   };
-  const togglePopup = ()=> setIsOpen(!isOpen);
+  const togglePopup = () => setIsOpen(!isOpen);
 
   return (
     <>
       <Navbar onClick={handleButtonClick} />
-      <Card cardData={htmlArray} />
-      <CustomPopup isOpen={isOpen} togglePopup={togglePopup} />
+      <Card cardData={htmlArray} value={receivedValue} />
+      <CustomPopup
+        isOpen={isOpen}
+        togglePopup={togglePopup}
+        onSendValue={handleSendValue}
+      />
     </>
   );
 }
 
 export default App;
+
